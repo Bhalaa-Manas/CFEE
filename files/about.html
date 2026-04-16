@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Cfee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="./assets/logo.jpg" alt="Cfee Logo">
+      <span class="brand-name">Cfee</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="store.html">Store Locator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="eyebrow">Our Story</span>
+    <h1>About Cfee</h1>
+    <p>A place built on passion, community, and the perfect cup of coffee.</p>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › About Us
+</div>
+
+<!-- ABOUT MAIN -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="eyebrow">Who We Are</span>
+        <h2>Brewed with Purpose,<br>Served with Love</h2>
+        <p>At Cfee, we believe that coffee is more than just a beverage — it's an experience that brings people together. Our journey began with a simple idea: to create a space where coffee lovers can indulge in their passion for exceptional brews while enjoying a warm and welcoming atmosphere.</p>
+        <p>Our team of skilled baristas is dedicated to crafting each cup with precision and care, using only the finest beans sourced from sustainable farms around the world. Whether you're a fan of bold espressos, creamy lattes, or refreshing cold brews, we have something to satisfy every palate.</p>
+        <p>But Cfee is more than just great coffee. It's a community hub where friends gather, ideas flow, and memories are made. We host regular events — from live music nights to art exhibitions — creating a vibrant space that celebrates creativity and connection.</p>
+
+        <div class="about-stats">
+          <div class="stat-card"><div class="num">2024</div><div class="label">Founded</div></div>
+          <div class="stat-card"><div class="num">50+</div><div class="label">Menu Items</div></div>
+          <div class="stat-card"><div class="num">10K+</div><div class="label">Happy Guests</div></div>
+        </div>
+      </div>
+      <div class="about-images">
+        <img src="./assets/banner2.jpg" alt="Cfee quote" onerror="this.style.background='#c49a5a';this.style.height='240px'">
+        <img src="./assets/Homemade Red Velvet Cheesecake.jpg" alt="Cfee quote" onerror="this.style.background='#7b4a2d';this.style.height='200px'">
+        <img src="./assets/Peri Peri Frenzy 🍟🔥.jpg" alt="Cfee quote" onerror="this.style.background='#5c3317';this.style.height='200px'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section style="padding:5rem 5%;background:var(--cream)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Our Values</span>
+      <h2>What We Stand For</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2rem">
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:2rem;border-top:4px solid var(--caramel);text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:1rem">🌱</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.5rem;color:var(--espresso)">Sustainability</h3>
+        <p style="font-size:0.88rem;color:var(--muted)">We source our beans from certified sustainable farms, reducing our environmental footprint one cup at a time.</p>
+      </div>
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:2rem;border-top:4px solid var(--caramel);text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:1rem">🤝</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.5rem;color:var(--espresso)">Community</h3>
+        <p style="font-size:0.88rem;color:var(--muted)">We believe great coffee is best enjoyed together. Our space is your space — for friends, family, and new connections.</p>
+      </div>
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:2rem;border-top:4px solid var(--caramel);text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:1rem">⭐</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.5rem;color:var(--espresso)">Quality</h3>
+        <p style="font-size:0.88rem;color:var(--muted)">From bean to cup, every step is executed with precision, passion, and an obsession for excellence.</p>
+      </div>
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:2rem;border-top:4px solid var(--caramel);text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:1rem">🎨</div>
+        <h3 style="font-size:1.2rem;margin-bottom:0.5rem;color:var(--espresso)">Creativity</h3>
+        <p style="font-size:0.88rem;color:var(--muted)">Art exhibitions, live music, poetry nights — we celebrate the creative spirit that thrives over a good brew.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DETAILED ABOUT -->
+<section style="padding:5rem 5%;background:var(--espresso)">
+  <div class="container" style="max-width:760px;text-align:center">
+    <span class="eyebrow" style="color:var(--caramel)">Our Vision</span>
+    <h2 style="color:var(--latte);font-size:clamp(1.8rem,3vw,2.5rem);margin:0.5rem 0 1.5rem">
+      More Than a Coffee Shop
+    </h2>
+    <p style="color:#c4a882;margin-bottom:1.2rem">
+      Welcome to CFEE Coffee House — a space where the aroma of freshly brewed coffee meets the warmth of community. Founded with the belief that coffee is more than just a beverage, we aim to create a place where people can relax, connect, and find inspiration.
+    </p>
+    <p style="color:#c4a882;margin-bottom:1.2rem">
+      At CFEE, we handpick the finest coffee beans, roast them with care, and craft every cup with precision. From bold espressos to soothing lattes and indulgent mochas, each brew is designed to bring comfort and joy.
+    </p>
+    <p style="color:#c4a882">
+      But CFEE is more than just a coffee shop. It's a hub for creativity and connection. We host art exhibitions, live music, and community events, fostering a vibrant atmosphere where ideas flourish and friendships are forged.
+    </p>
+    <a href="menu.html" class="btn-primary" style="margin-top:2rem;display:inline-block">Explore Our Menu</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid container">
+    <div class="footer-brand">
+      <div class="brand-name">Cfee</div>
+      <p>Where every cup is brewed with love and every visit feels like coming home.</p>
+      <div class="footer-social">
+        <a class="social-link" href="#" title="Instagram"><img src="./assets/social.png" width="30"></a>
+        <a class="social-link" href="#" title="Facebook"><img src="./assets/facebook.png" width="30"></a>
+        <a class="social-link" href="#" title="Twitter"><img src="./assets/twitter.png" width="30"></a>
+        <a class="social-link" href="#" title="WhatsApp"><img src="./assets/logo.png" width="30"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="store.html">Store Locator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="menu.html">Espresso Classics</a></li>
+        <li><a href="menu.html">Special Brews</a></li>
+        <li><a href="menu.html">Tea Selection</a></li>
+        <li><a href="menu.html">Snacks & Bites</a></li>
+        <li><a href="menu.html">Desserts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p style="font-size:0.82rem;color:#9b7f65;margin-bottom:0.75rem">Get offers and news in your inbox.</p>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="your@email.com">
+        <button class="btn-primary" style="width:100%">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Cfee by @bhalaamanas. All rights reserved. | Made with ☕ in Delhi</p>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal-val">₹0</span></div>
+    <div class="cart-subtotal"><span>Delivery</span><span>₹30</span></div>
+    <div class="cart-subtotal"><span>GST (5%)</span><span id="cart-tax-val">₹0</span></div>
+    <div class="cart-total"><span>Total</span><span id="cart-total-val">₹0</span></div>
+    <button class="btn-primary" style="width:100%;margin-bottom:0.5rem" onclick="closeCart();openPayment()">Proceed to Checkout</button>
+    <button class="btn-outline" style="width:100%" onclick="closeCart()">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="payment-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>☕ Checkout</h3>
+      <button class="modal-close" onclick="closePayment()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="payment-steps">
+        <button class="step-btn active" data-step="delivery" onclick="showPaymentStep('delivery')">1. Delivery</button>
+        <button class="step-btn" data-step="payment" onclick="showPaymentStep('payment')">2. Payment</button>
+        <button class="step-btn" data-step="success">3. Confirm</button>
+      </div>
+      <div class="payment-step active" id="step-delivery">
+        <div class="order-summary-mini"><h4>Order Summary</h4><div id="order-lines"></div></div>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Aarav"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Address</label><input type="text" placeholder="House/Flat, Street, Area"></div>
+        <div class="form-row">
+          <div class="form-group"><label>City</label><input type="text" placeholder="New Delhi"></div>
+          <div class="form-group"><label>Pincode</label><input type="text" placeholder="110001"></div>
+        </div>
+        <button class="btn-primary" style="width:100%" onclick="showPaymentStep('payment');updateOrderSummary()">Continue →</button>
+      </div>
+      <div class="payment-step" id="step-payment">
+        <div class="payment-methods">
+          <h4>Select Payment Method</h4>
+          <div class="pm-grid">
+            <div class="pm-option" data-method="card" onclick="selectPaymentMethod('card')"><div class="pm-icon">💳</div><div class="pm-label">Card</div></div>
+            <div class="pm-option" data-method="upi" onclick="selectPaymentMethod('upi')"><div class="pm-icon">📱</div><div class="pm-label">UPI</div></div>
+            <div class="pm-option" data-method="netbanking" onclick="selectPaymentMethod('netbanking')"><div class="pm-icon">🏦</div><div class="pm-label">Net Banking</div></div>
+            <div class="pm-option" data-method="cod" onclick="selectPaymentMethod('cod')"><div class="pm-icon">💵</div><div class="pm-label">Cash on Delivery</div></div>
+          </div>
+        </div>
+        <div id="fields-card" style="display:none">
+          <div class="form-group"><label>Card Number</label><input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Expiry</label><input type="text" id="card-exp" placeholder="MM/YY" maxlength="5"></div>
+            <div class="form-group"><label>CVV</label><input type="password" id="card-cvv" placeholder="•••" maxlength="3"></div>
+          </div>
+        </div>
+        <div id="fields-upi" style="display:none">
+          <div class="form-group"><label>UPI ID</label><input type="text" id="upi-id" placeholder="yourname@upi"></div>
+        </div>
+        <div id="fields-netbanking" style="display:none">
+          <div class="form-group"><label>Select Bank</label><select><option>SBI</option><option>HDFC</option><option>ICICI</option><option>Axis</option></select></div>
+        </div>
+        <div id="fields-cod" style="display:none">
+          <div style="background:var(--latte);border-radius:10px;padding:1rem;font-size:0.88rem;color:var(--espresso)">💵 Pay <strong id="pay-total">₹0</strong> in cash on delivery.</div>
+        </div>
+        <button id="place-order-btn" class="btn-primary" style="width:100%;margin-top:1.5rem" onclick="placeOrder()">Place Order →</button>
+        <button class="btn-outline" style="width:100%;margin-top:0.5rem" onclick="showPaymentStep('delivery')">← Back</button>
+      </div>
+      <div class="payment-step" id="step-success">
+        <div class="success-screen">
+          <div class="success-icon">🎉</div>
+          <h3>Order Placed!</h3>
+          <p>Thank you for ordering from Cfee. Your coffee is on its way!</p>
+          <div class="order-id" id="order-id-display">Order #---</div>
+          <p style="font-size:0.82rem;color:var(--muted)">Estimated delivery: 25–35 minutes</p>
+          <button class="btn-primary" style="margin-top:1.5rem" onclick="closePayment()">Continue Shopping ☕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

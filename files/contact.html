@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Cfee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="images/logo.jpg" alt="Cfee Logo">
+      <span class="brand-name">Cfee</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="store.html">Store Locator</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="eyebrow">Say Hello</span>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Questions, feedback, or just saying hello — we're here.</p>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › Contact
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>Whether you have a question about our menu, want to provide feedback, are interested in hosting an event, or just want to say hello — our team is ready to help.</p>
+
+        <div class="contact-item">
+          <div class="c-icon">📍</div>
+          <div class="c-text">
+            <strong>Address</strong>
+            <span>Block A, Connaught Place, New Delhi — 110001</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="c-icon">📞</div>
+          <div class="c-text">
+            <strong>Phone</strong>
+            <span>+91 98765 43210</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="c-icon">✉️</div>
+          <div class="c-text">
+            <strong>Email</strong>
+            <span>hello@cfee.in</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="c-icon">🕐</div>
+          <div class="c-text">
+            <strong>Working Hours</strong>
+            <span>Mon–Sun: 8:00 AM – 10:00 PM</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="c-icon">🎵</div>
+          <div class="c-text">
+            <strong>Events & Bookings</strong>
+            <span>events@cfee.in · +91 98765 43213</span>
+          </div>
+        </div>
+
+        <!-- Mini Map -->
+        <div style="margin-top:2rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.0856235972005!2d77.2846816!3d28.6571548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd7f821cebab%3A0x20acfdfe0f5390d5!2sJonBeans!5e0!3m2!1sen!2sin!4v1757790835220!5m2!1sen!2sin"
+            width="100%" height="220" style="border:0;display:block"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" placeholder="Aarav" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Sharma">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="hello@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option value="">Select a topic…</option>
+            <option>General Inquiry</option>
+            <option>Menu Feedback</option>
+            <option>Event Booking</option>
+            <option>Catering Request</option>
+            <option>Complaint / Suggestion</option>
+            <option>Press / Media</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" placeholder="Tell us anything…" required></textarea>
+        </div>
+
+        <div class="form-group" style="display:flex;align-items:center;gap:0.75rem">
+          <input type="checkbox" id="newsletter" style="width:auto;cursor:pointer">
+          <label for="newsletter" style="margin-bottom:0;cursor:pointer;font-size:0.85rem">Subscribe to our newsletter for offers and updates</label>
+        </div>
+
+        <button class="btn-primary" style="width:100%;margin-top:0.5rem" id="submit-btn" onclick="submitContactForm()">
+          Send Message ✉️
+        </button>
+
+        <p style="font-size:0.78rem;color:var(--muted);text-align:center;margin-top:1rem">
+          We typically respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:5rem 5%;background:var(--foam)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Quick Answers</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div style="max-width:760px;margin:0 auto">
+
+      <details style="background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;cursor:pointer;border:1px solid var(--latte)">
+        <summary style="font-weight:600;color:var(--espresso);font-size:0.95rem">Do you accept reservations?</summary>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">We're a walk-in café but for events or large groups (8+), please contact us at events@cfee.in to pre-book a section.</p>
+      </details>
+
+      <details style="background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;cursor:pointer;border:1px solid var(--latte)">
+        <summary style="font-weight:600;color:var(--espresso);font-size:0.95rem">Do you offer home delivery?</summary>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">Yes! You can order online directly from our website. We deliver within 5 km of each store. Delivery charge is ₹30.</p>
+      </details>
+
+      <details style="background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;cursor:pointer;border:1px solid var(--latte)">
+        <summary style="font-weight:600;color:var(--espresso);font-size:0.95rem">Do you have vegan options?</summary>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">Absolutely! All our teas, cold brew, and black coffees are vegan. We also offer oat milk and almond milk alternatives for an additional ₹20.</p>
+      </details>
+
+      <details style="background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;cursor:pointer;border:1px solid var(--latte)">
+        <summary style="font-weight:600;color:var(--espresso);font-size:0.95rem">Can I host a private event at Cfee?</summary>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">Yes! We host birthday parties, corporate gatherings, workshops, and more. Email events@cfee.in with your requirements.</p>
+      </details>
+
+      <details style="background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;cursor:pointer;border:1px solid var(--latte)">
+        <summary style="font-weight:600;color:var(--espresso);font-size:0.95rem">Is there Wi-Fi available?</summary>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">Yes, complimentary high-speed Wi-Fi is available at all our locations. Ask a barista for the password.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid container">
+    <div class="footer-brand">
+      <div class="brand-name">Cfee</div>
+      <p>Where every cup is brewed with love and every visit feels like coming home.</p>
+      <div class="footer-social">
+        <a class="social-link" href="#" title="Instagram"><img src="./assets/social.png" width="30"></a>
+        <a class="social-link" href="#" title="Facebook"><img src="./assets/facebook.png" width="30"></a>
+        <a class="social-link" href="#" title="Twitter"><img src="./assets/twitter.png" width="30"></a>
+        <a class="social-link" href="#" title="WhatsApp"><img src="./assets/logo.png" width="30"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Our Menu</a></li><li><a href="store.html">Store Locator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="menu.html">Espresso Classics</a></li><li><a href="menu.html">Special Brews</a></li>
+        <li><a href="menu.html">Tea Selection</a></li><li><a href="menu.html">Snacks & Bites</a></li>
+        <li><a href="menu.html">Desserts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="your@email.com">
+        <button class="btn-primary" style="width:100%">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 Cfee by @bhalaamanas. All rights reserved.</p></div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal-val">₹0</span></div>
+    <div class="cart-subtotal"><span>Delivery</span><span>₹30</span></div>
+    <div class="cart-subtotal"><span>GST (5%)</span><span id="cart-tax-val">₹0</span></div>
+    <div class="cart-total"><span>Total</span><span id="cart-total-val">₹0</span></div>
+    <button class="btn-primary" style="width:100%;margin-bottom:0.5rem" onclick="closeCart();openPayment()">Checkout</button>
+    <button class="btn-outline" style="width:100%" onclick="closeCart()">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="payment-modal">
+  <div class="modal">
+    <div class="modal-header"><h3>☕ Checkout</h3><button class="modal-close" onclick="closePayment()">×</button></div>
+    <div class="modal-body">
+      <div class="payment-steps">
+        <button class="step-btn active" data-step="delivery" onclick="showPaymentStep('delivery')">1. Delivery</button>
+        <button class="step-btn" data-step="payment" onclick="showPaymentStep('payment')">2. Payment</button>
+        <button class="step-btn" data-step="success">3. Confirm</button>
+      </div>
+      <div class="payment-step active" id="step-delivery">
+        <div class="order-summary-mini"><h4>Order Summary</h4><div id="order-lines"></div></div>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Aarav"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Address</label><input type="text" placeholder="Street, Area"></div>
+        <div class="form-row">
+          <div class="form-group"><label>City</label><input type="text" placeholder="New Delhi"></div>
+          <div class="form-group"><label>Pincode</label><input type="text" placeholder="110001"></div>
+        </div>
+        <button class="btn-primary" style="width:100%" onclick="showPaymentStep('payment');updateOrderSummary()">Continue →</button>
+      </div>
+      <div class="payment-step" id="step-payment">
+        <div class="payment-methods">
+          <h4>Select Payment Method</h4>
+          <div class="pm-grid">
+            <div class="pm-option" data-method="card" onclick="selectPaymentMethod('card')"><div class="pm-icon">💳</div><div class="pm-label">Card</div></div>
+            <div class="pm-option" data-method="upi" onclick="selectPaymentMethod('upi')"><div class="pm-icon">📱</div><div class="pm-label">UPI</div></div>
+            <div class="pm-option" data-method="netbanking" onclick="selectPaymentMethod('netbanking')"><div class="pm-icon">🏦</div><div class="pm-label">Net Banking</div></div>
+            <div class="pm-option" data-method="cod" onclick="selectPaymentMethod('cod')"><div class="pm-icon">💵</div><div class="pm-label">Cash on Delivery</div></div>
+          </div>
+        </div>
+        <div id="fields-card" style="display:none">
+          <div class="form-group"><label>Card Number</label><input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Expiry</label><input type="text" id="card-exp" placeholder="MM/YY" maxlength="5"></div>
+            <div class="form-group"><label>CVV</label><input type="password" id="card-cvv" placeholder="•••" maxlength="3"></div>
+          </div>
+        </div>
+        <div id="fields-upi" style="display:none"><div class="form-group"><label>UPI ID</label><input type="text" id="upi-id" placeholder="yourname@upi"></div></div>
+        <div id="fields-netbanking" style="display:none"><div class="form-group"><label>Bank</label><select><option>SBI</option><option>HDFC</option><option>ICICI</option><option>Axis</option></select></div></div>
+        <div id="fields-cod" style="display:none"><div style="background:var(--latte);border-radius:10px;padding:1rem;font-size:0.88rem">💵 Pay <strong id="pay-total">₹0</strong> cash on delivery.</div></div>
+        <button id="place-order-btn" class="btn-primary" style="width:100%;margin-top:1.5rem" onclick="placeOrder()">Place Order →</button>
+        <button class="btn-outline" style="width:100%;margin-top:0.5rem" onclick="showPaymentStep('delivery')">← Back</button>
+      </div>
+      <div class="payment-step" id="step-success">
+        <div class="success-screen">
+          <div class="success-icon">🎉</div>
+          <h3>Order Placed!</h3>
+          <p>Thank you! Your Cfee order is confirmed.</p>
+          <div class="order-id" id="order-id-display">Order #---</div>
+          <button class="btn-primary" style="margin-top:1.5rem" onclick="closePayment()">Continue ☕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+<script>
+  function submitContactForm() {
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('message').value.trim();
+    if (!fname || !email || !msg) { showToast('Please fill all required fields *'); return; }
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    setTimeout(() => {
+      showToast('✅ Message sent! We\'ll get back to you within 24 hours.');
+      btn.disabled = false;
+      btn.textContent = 'Send Message ✉️';
+      document.getElementById('fname').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }, 1600);
+  }
+</script>
+</body>
+</html>

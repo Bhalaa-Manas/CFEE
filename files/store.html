@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Locator — Cfee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="images/logo.jpg" alt="Cfee Logo">
+      <span class="brand-name">Cfee</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="store.html" class="active">Store Locator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="eyebrow">Find Us</span>
+    <h1>Store Locator</h1>
+    <p>Find a Cfee near you — because great coffee should never be too far away.</p>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › Store Locator
+</div>
+
+<!-- STORE MAIN -->
+<section class="store-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Our Locations</span>
+      <h2>We're Closer Than You Think</h2>
+      <p>Multiple stores across Delhi NCR, each crafted to feel like a second home.</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Store Cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:3rem">
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--latte);border-top:4px solid var(--caramel)">
+        <div style="font-size:1.8rem;margin-bottom:0.75rem">📍</div>
+        <h3 style="font-size:1.15rem;color:var(--espresso);margin-bottom:0.4rem">Connaught Place</h3>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem">Block A, Connaught Place, New Delhi — 110001</p>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.4rem">🕐 8:00 AM – 10:00 PM · Mon–Sun</div>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem">📞 +91 98765 43210</div>
+        <span style="display:inline-block;background:#e8f5e9;color:#2e7d32;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:700">● Open Now</span>
+      </div>
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--latte);border-top:4px solid var(--caramel)">
+        <div style="font-size:1.8rem;margin-bottom:0.75rem">📍</div>
+        <h3 style="font-size:1.15rem;color:var(--espresso);margin-bottom:0.4rem">Hauz Khas Village</h3>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem">12, Hauz Khas Village, South Delhi — 110016</p>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.4rem">🕐 9:00 AM – 11:00 PM · Mon–Sun</div>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem">📞 +91 98765 43211</div>
+        <span style="display:inline-block;background:#e8f5e9;color:#2e7d32;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:700">● Open Now</span>
+      </div>
+
+      <div style="background:var(--foam);border-radius:var(--radius);padding:1.75rem;border:1px solid var(--latte);border-top:4px solid var(--caramel)">
+        <div style="font-size:1.8rem;margin-bottom:0.75rem">📍</div>
+        <h3 style="font-size:1.15rem;color:var(--espresso);margin-bottom:0.4rem">Cyber Hub, Gurugram</h3>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem">DLF Cyber Hub, DLF Phase 2, Gurugram — 122002</p>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:0.4rem">🕐 8:00 AM – 10:30 PM · Mon–Sun</div>
+        <div style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem">📞 +91 98765 43212</div>
+        <span style="display:inline-block;background:#e8f5e9;color:#2e7d32;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.75rem;font-weight:700">● Open Now</span>
+      </div>
+
+    </div>
+
+    <!-- Map + Info -->
+    <div class="store-inner">
+      <div class="store-info">
+        <h3>Flagship: Connaught Place</h3>
+        <p>Our flagship store at the heart of Delhi — a cozy haven designed for long conversations and great coffee.</p>
+        <div class="store-detail">
+          <span class="icon">📍</span>
+          <div class="detail-text">
+            <strong>Address</strong>
+            <span>Block A, Connaught Place, New Delhi — 110001</span>
+          </div>
+        </div>
+        <div class="store-detail">
+          <span class="icon">🕐</span>
+          <div class="detail-text">
+            <strong>Hours</strong>
+            <span>Mon–Sun: 8:00 AM – 10:00 PM</span>
+          </div>
+        </div>
+        <div class="store-detail">
+          <span class="icon">📞</span>
+          <div class="detail-text">
+            <strong>Phone</strong>
+            <span>+91 98765 43210</span>
+          </div>
+        </div>
+        <div class="store-detail">
+          <span class="icon">🅿️</span>
+          <div class="detail-text">
+            <strong>Parking</strong>
+            <span>Rajiv Chowk Metro station nearby · Street parking available</span>
+          </div>
+        </div>
+        <div class="store-detail">
+          <span class="icon">♿</span>
+          <div class="detail-text">
+            <strong>Accessibility</strong>
+            <span>Wheelchair accessible · Ramp at entrance</span>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="margin-top:1.5rem;display:inline-block">Get Directions</a>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.0856235972005!2d77.2846816!3d28.6571548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd7f821cebab%3A0x20acfdfe0f5390d5!2sJonBeans!5e0!3m2!1sen!2sin!4v1757790835220!5m2!1sen!2sin"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid container">
+    <div class="footer-brand">
+      <div class="brand-name">Cfee</div>
+      <p>Where every cup is brewed with love and every visit feels like coming home.</p>
+      <div class="footer-social">
+         <a class="social-link" href="#" title="Instagram"><img src="./assets/social.png" width="30"></a>
+        <a class="social-link" href="#" title="Facebook"><img src="./assets/facebook.png" width="30"></a>
+        <a class="social-link" href="#" title="Twitter"><img src="./assets/twitter.png" width="30"></a>
+        <a class="social-link" href="#" title="WhatsApp"><img src="./assets/logo.png" width="30"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Our Menu</a></li><li><a href="store.html">Store Locator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Stores</h4>
+      <ul>
+        <li><a href="#">Connaught Place</a></li>
+        <li><a href="#">Hauz Khas Village</a></li>
+        <li><a href="#">Cyber Hub, Gurugram</a></li>
+        <li><a href="#">Coming Soon…</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="your@email.com">
+        <button class="btn-primary" style="width:100%">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 Cfee by @bhalaamanas. All rights reserved.</p></div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal-val">₹0</span></div>
+    <div class="cart-subtotal"><span>Delivery</span><span>₹30</span></div>
+    <div class="cart-subtotal"><span>GST (5%)</span><span id="cart-tax-val">₹0</span></div>
+    <div class="cart-total"><span>Total</span><span id="cart-total-val">₹0</span></div>
+    <button class="btn-primary" style="width:100%;margin-bottom:0.5rem" onclick="closeCart();openPayment()">Checkout</button>
+    <button class="btn-outline" style="width:100%" onclick="closeCart()">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="payment-modal">
+  <div class="modal">
+    <div class="modal-header"><h3>☕ Checkout</h3><button class="modal-close" onclick="closePayment()">×</button></div>
+    <div class="modal-body">
+      <div class="payment-steps">
+        <button class="step-btn active" data-step="delivery" onclick="showPaymentStep('delivery')">1. Delivery</button>
+        <button class="step-btn" data-step="payment" onclick="showPaymentStep('payment')">2. Payment</button>
+        <button class="step-btn" data-step="success">3. Confirm</button>
+      </div>
+      <div class="payment-step active" id="step-delivery">
+        <div class="order-summary-mini"><h4>Order Summary</h4><div id="order-lines"></div></div>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Aarav"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Address</label><input type="text" placeholder="Street, Area"></div>
+        <div class="form-row">
+          <div class="form-group"><label>City</label><input type="text" placeholder="New Delhi"></div>
+          <div class="form-group"><label>Pincode</label><input type="text" placeholder="110001"></div>
+        </div>
+        <button class="btn-primary" style="width:100%" onclick="showPaymentStep('payment');updateOrderSummary()">Continue →</button>
+      </div>
+      <div class="payment-step" id="step-payment">
+        <div class="payment-methods">
+          <h4>Select Payment Method</h4>
+          <div class="pm-grid">
+            <div class="pm-option" data-method="card" onclick="selectPaymentMethod('card')"><div class="pm-icon">💳</div><div class="pm-label">Card</div></div>
+            <div class="pm-option" data-method="upi" onclick="selectPaymentMethod('upi')"><div class="pm-icon">📱</div><div class="pm-label">UPI</div></div>
+            <div class="pm-option" data-method="netbanking" onclick="selectPaymentMethod('netbanking')"><div class="pm-icon">🏦</div><div class="pm-label">Net Banking</div></div>
+            <div class="pm-option" data-method="cod" onclick="selectPaymentMethod('cod')"><div class="pm-icon">💵</div><div class="pm-label">Cash on Delivery</div></div>
+          </div>
+        </div>
+        <div id="fields-card" style="display:none">
+          <div class="form-group"><label>Card Number</label><input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Expiry</label><input type="text" id="card-exp" placeholder="MM/YY" maxlength="5"></div>
+            <div class="form-group"><label>CVV</label><input type="password" id="card-cvv" placeholder="•••" maxlength="3"></div>
+          </div>
+        </div>
+        <div id="fields-upi" style="display:none"><div class="form-group"><label>UPI ID</label><input type="text" id="upi-id" placeholder="yourname@upi"></div></div>
+        <div id="fields-netbanking" style="display:none"><div class="form-group"><label>Bank</label><select><option>SBI</option><option>HDFC</option><option>ICICI</option><option>Axis</option></select></div></div>
+        <div id="fields-cod" style="display:none"><div style="background:var(--latte);border-radius:10px;padding:1rem;font-size:0.88rem">💵 Pay <strong id="pay-total">₹0</strong> cash on delivery.</div></div>
+        <button id="place-order-btn" class="btn-primary" style="width:100%;margin-top:1.5rem" onclick="placeOrder()">Place Order →</button>
+        <button class="btn-outline" style="width:100%;margin-top:0.5rem" onclick="showPaymentStep('delivery')">← Back</button>
+      </div>
+      <div class="payment-step" id="step-success">
+        <div class="success-screen">
+          <div class="success-icon">🎉</div>
+          <h3>Order Placed!</h3>
+          <p>Thank you! Your Cfee order is confirmed.</p>
+          <div class="order-id" id="order-id-display">Order #---</div>
+          <button class="btn-primary" style="margin-top:1.5rem" onclick="closePayment()">Continue ☕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

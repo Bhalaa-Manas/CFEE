@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Cfee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="images/logo.jpg" alt="Cfee Logo">
+      <span class="brand-name">Cfee</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="store.html">Store Locator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="eyebrow">What We Serve</span>
+    <h1>Our Menu</h1>
+    <p>Carefully crafted brews, wholesome bites, and indulgent desserts — all made fresh.</p>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › Menu
+</div>
+
+<!-- FULL MENU -->
+<section class="menu-section">
+  <div class="container">
+    <div class="menu-filters">
+      <button class="filter-btn active" data-category="all">☕ All Items</button>
+      <button class="filter-btn" data-category="espresso">Espresso</button>
+      <button class="filter-btn" data-category="special">Special Brews</button>
+      <button class="filter-btn" data-category="tea">Tea</button>
+      <button class="filter-btn" data-category="snacks">Snacks</button>
+      <button class="filter-btn" data-category="desserts">Desserts</button>
+    </div>
+
+    <div class="menu-grid">
+
+      <!-- ESPRESSO CLASSICS -->
+            <div class="menu-card" data-category="espresso">
+        <div class="menu-card-img-placeholder"><img src="./assets/Espresso Coffee Recipe.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Espresso Classics</span>
+          <h3>Espresso</h3>
+          <p>Strong, single shot of pure coffee — bold and full of character.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹80</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Espresso',80,'☕','espresso')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="espresso">
+        <div class="menu-card-img-placeholder"><img src="./assets/Iced Americano.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Espresso Classics</span>
+          <h3>Americano</h3>
+          <p>Espresso with hot water — smooth and effortlessly refined.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹100</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Americano',100,'🫖','espresso')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="espresso">
+        <div class="menu-card-img-placeholder"><img src="./assets/𝓡𝑜𝑥🍁.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Espresso Classics</span>
+          <h3>Cappuccino</h3>
+          <p>Espresso with steamed milk and thick, velvety foam on top.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹120</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Cappuccino',120,'🍵','espresso')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="espresso">
+        <div class="menu-card-img-placeholder"><img src="./assets/Latte.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Espresso Classics</span>
+          <h3>Café Latte</h3>
+          <p>Smooth espresso beautifully layered with creamy steamed milk.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹130</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Café Latte',130,'🥛','espresso')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="espresso">
+        <div class="menu-card-img-placeholder"><img src="./assets/Espresso Cups Set.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Espresso Classics</span>
+          <h3>Mocha</h3>
+          <p>Rich espresso, silky chocolate, and foamed milk — indulgently good.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹150</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Mocha',150,'🍫','espresso')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Brews -->
+      <div class="menu-card" data-category="special">
+        <div class="menu-card-img-placeholder"><img src="./assets/iced brew image.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Special Brews</span>
+          <h3>Cold Brew</h3>
+          <p>Slow-brewed, silky chilled coffee — perfectly smooth with zero bitterness.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹160</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Cold Brew',160,'🧊','special')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="special">
+        <div class="menu-card-img-placeholder"><img src="./assets/Iced coffee.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Special Brews</span>
+          <h3>Iced Latte</h3>
+          <p>Chilled espresso latte over ice — refreshing and creamy.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹150</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Iced Latte',150,'🥤','special')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="special">
+        <div class="menu-card-img-placeholder"><img src="./assets/☕ Caramel Macchiato 🍯.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Special Brews</span>
+          <h3>Caramel Macchiato</h3>
+          <p>Espresso, velvety milk, and a gorgeous caramel drizzle on top.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹170</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Caramel Macchiato',170,'🍮','special')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tea -->
+      <div class="menu-card" data-category="tea">
+        <div class="menu-card-img-placeholder"><img src="./assets/Indian Masala Chai (Spiced Milk Tea).jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Tea Selection</span>
+          <h3>Masala Chai</h3>
+          <p>Traditional Indian spiced tea — warming and full of flavour.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹60</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Masala Chai',60,'🫖','tea')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tea">
+        <div class="menu-card-img-placeholder"><img src="./assets/Pouring Steaming Green Tea into a White Cup.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Tea Selection</span>
+          <h3>Green Tea</h3>
+          <p>Refreshing, antioxidant-rich herbal green tea — light and healthful.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹80</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Green Tea',80,'🍃','tea')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="tea">
+        <div class="menu-card-img-placeholder"><img src="./assets/✨ Soothe Belly Bloat Naturally with This Ginger Lemon Tea Recipe.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Tea Selection</span>
+          <h3>Lemon Honey Tea</h3>
+          <p>Zesty lemon meets golden honey in this soothing comforting blend.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹90</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Lemon Honey Tea',90,'🍋','tea')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Snacks -->
+      <div class="menu-card" data-category="snacks">
+        <div class="menu-card-img-placeholder"><img src="./assets/Veg Cheese Sandwich.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Snacks & Bites</span>
+          <h3>Veg Sandwich</h3>
+          <p>Fresh garden veggies with house sauces in soft, toasted bread.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹100</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Veg Sandwich',100,'🥪','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="snacks">
+        <div class="menu-card-img-placeholder"><img src="./assets/Paneer Kathi Roll.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Snacks & Bites</span>
+          <h3>Paneer Wrap</h3>
+          <p>Spiced paneer and fresh veggies rolled in a soft, warm tortilla.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹120</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Paneer Wrap',120,'🌯','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="snacks">
+        <div class="menu-card-img-placeholder"><img src="./assets/🧄 Irresistible Garlic Bread Bites Recipe🥖 Perfectly Crispy and Flavorful Appetizers🎉.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Snacks & Bites</span>
+          <h3>Garlic Bread</h3>
+          <p>Golden toasted bread lavished with butter, garlic, and fresh herbs.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹190</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Garlic Bread',90,'🧄','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+            <div class="menu-card" data-category="snacks">
+        <div class="menu-card-img-placeholder"><img src="./assets/live laugh love french fries.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Snacks & Bites</span>
+          <h3>Plain Fries</h3>
+          <p>Golden, crispy fries lightly salted to perfection — simple, timeless indulgence.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹90</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Garlic Bread',90,'🧄','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+            <div class="menu-card" data-category="snacks">
+        <div class="menu-card-img-placeholder"><img src="./assets/Peri Peri Frenzy 🍟🔥.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Snacks & Bites</span>
+          <h3>Peri Peri Fries</h3>
+          <p>Crispy fries tossed in bold peri peri spice — fiery, addictive, and full of flavor.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹120</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Garlic Bread',90,'🧄','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+
+            <div class="menu-card" data-category="snacks">
+        <div class="menu-card-img-placeholder"><img src="./assets/Truffle Garlic Parmesan Fries.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Snacks & Bites</span>
+          <h3>Truffle Garlic Parmesan Fries</h3>
+          <p>Golden fries infused with aromatic truffle and a hint of parmesan — pure gourmet indulgence.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹150</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Garlic Bread',90,'🧄','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Desserts -->
+
+            <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/Brownies.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Choco Brownie</h3>
+          <p>Dense, fudgy chocolate brownie — warm from the oven, perfect with coffee.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹110</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Choco Brownie',110,'🍫','snacks')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/Easy No-Bake Lotus Biscoff Cheesecake Recipe.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Lotus Biscoff Cheesecake</h3>
+          <p>Creamy, classic cheesecake on a buttery Lotus Biscoff biscuit base — divine.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹160</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Cheesecake',160,'🍰','desserts')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+         <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/Lemon Cheesecake Delight - Valerie Recipes.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Lotus Biscoff Cheesecake</h3>
+          <p>Creamy, zesty lemon cheesecake on a buttery biscuit base — refreshingly divine.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹160</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Cheesecake',160,'🍰','desserts')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+               <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/No-Bake Blueberry Cheesecake Recipe🫐🍰.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Blue Berry Cheesecake</h3>
+          <p>Creamy, classic cheesecake topped with luscious blueberry compote on a buttery biscuit base — berry bliss in every bite.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹160</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Cheesecake',160,'🍰','desserts')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+               <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/Homemade Red Velvet Cheesecake.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Red Velvet Cheesecake</h3>
+          <p>Rich red velvet cheesecake layered on a buttery biscuit base — decadence redefined.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹160</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Cheesecake',160,'🍰','desserts')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/Double Chocolate Chip Muffins – Rich and Fudgy Bakery Style.jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Chocolate Muffin</h3>
+          <p>Soft, fluffy muffin with a rich, molten chocolate core inside.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹80</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Chocolate Muffin',80,'🧁','desserts')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="desserts">
+        <div class="menu-card-img-placeholder"><img src="./assets/I love this recipe because it’s not only easy but….jpg" ></div>
+        <div class="menu-card-body">
+          <span class="menu-card-cat">Desserts</span>
+          <h3>Waffles with Ice Cream</h3>
+          <p>Crispy golden waffles topped with a generous scoop of velvety ice cream.</p>
+          <div class="menu-card-footer">
+            <span class="price">₹150</span>
+            <button class="add-cart-btn" onclick="handleAddToCart(this,'Waffles with Ice Cream',150,'🧇','desserts')">+ Add</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div><!-- /menu-grid -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid container">
+    <div class="footer-brand">
+      <div class="brand-name">Cfee</div>
+      <p>Where every cup is brewed with love and every visit feels like coming home.</p>
+      <div class="footer-social">
+         <a class="social-link" href="#" title="Instagram"><img src="./assets/social.png" width="30"></a>
+        <a class="social-link" href="#" title="Facebook"><img src="./assets/facebook.png" width="30"></a>
+        <a class="social-link" href="#" title="Twitter"><img src="./assets/twitter.png" width="30"></a>
+        <a class="social-link" href="#" title="WhatsApp"><img src="./assets/logo.png" width="30"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Our Menu</a></li><li><a href="store.html">Store Locator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">Espresso Classics</a></li><li><a href="#">Special Brews</a></li>
+        <li><a href="#">Tea Selection</a></li><li><a href="#">Snacks & Bites</a></li>
+        <li><a href="#">Desserts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <div class="footer-newsletter">
+        <input type="email" placeholder="your@email.com">
+        <button class="btn-primary" style="width:100%">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 Cfee by @bhalaamanas. All rights reserved.</p></div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal-val">₹0</span></div>
+    <div class="cart-subtotal"><span>Delivery</span><span>₹30</span></div>
+    <div class="cart-subtotal"><span>GST (5%)</span><span id="cart-tax-val">₹0</span></div>
+    <div class="cart-total"><span>Total</span><span id="cart-total-val">₹0</span></div>
+    <button class="btn-primary" style="width:100%;margin-bottom:0.5rem" onclick="closeCart();openPayment()">Checkout</button>
+    <button class="btn-outline" style="width:100%" onclick="closeCart()">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="payment-modal">
+  <div class="modal">
+    <div class="modal-header"><h3>☕ Checkout</h3><button class="modal-close" onclick="closePayment()">×</button></div>
+    <div class="modal-body">
+      <div class="payment-steps">
+        <button class="step-btn active" data-step="delivery" onclick="showPaymentStep('delivery')">1. Delivery</button>
+        <button class="step-btn" data-step="payment" onclick="showPaymentStep('payment')">2. Payment</button>
+        <button class="step-btn" data-step="success">3. Confirm</button>
+      </div>
+      <div class="payment-step active" id="step-delivery">
+        <div class="order-summary-mini"><h4>Order Summary</h4><div id="order-lines"></div></div>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Aarav"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210"></div>
+        <div class="form-group"><label>Address</label><input type="text" placeholder="Street, Area"></div>
+        <div class="form-row">
+          <div class="form-group"><label>City</label><input type="text" placeholder="New Delhi"></div>
+          <div class="form-group"><label>Pincode</label><input type="text" placeholder="110001"></div>
+        </div>
+        <button class="btn-primary" style="width:100%" onclick="showPaymentStep('payment');updateOrderSummary()">Continue →</button>
+      </div>
+      <div class="payment-step" id="step-payment">
+        <div class="payment-methods">
+          <h4>Select Payment Method</h4>
+          <div class="pm-grid">
+            <div class="pm-option" data-method="card" onclick="selectPaymentMethod('card')"><div class="pm-icon">💳</div><div class="pm-label">Card</div></div>
+            <div class="pm-option" data-method="upi" onclick="selectPaymentMethod('upi')"><div class="pm-icon">📱</div><div class="pm-label">UPI</div></div>
+            <div class="pm-option" data-method="netbanking" onclick="selectPaymentMethod('netbanking')"><div class="pm-icon">🏦</div><div class="pm-label">Net Banking</div></div>
+            <div class="pm-option" data-method="cod" onclick="selectPaymentMethod('cod')"><div class="pm-icon">💵</div><div class="pm-label">Cash on Delivery</div></div>
+          </div>
+        </div>
+        <div id="fields-card" style="display:none">
+          <div class="form-group"><label>Card Number</label><input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Expiry</label><input type="text" id="card-exp" placeholder="MM/YY" maxlength="5"></div>
+            <div class="form-group"><label>CVV</label><input type="password" id="card-cvv" placeholder="•••" maxlength="3"></div>
+          </div>
+        </div>
+        <div id="fields-upi" style="display:none"><div class="form-group"><label>UPI ID</label><input type="text" id="upi-id" placeholder="yourname@upi"></div></div>
+        <div id="fields-netbanking" style="display:none"><div class="form-group"><label>Bank</label><select><option>SBI</option><option>HDFC</option><option>ICICI</option><option>Axis</option></select></div></div>
+        <div id="fields-cod" style="display:none"><div style="background:var(--latte);border-radius:10px;padding:1rem;font-size:0.88rem">💵 Pay <strong id="pay-total">₹0</strong> cash on delivery.</div></div>
+        <button id="place-order-btn" class="btn-primary" style="width:100%;margin-top:1.5rem" onclick="placeOrder()">Place Order →</button>
+        <button class="btn-outline" style="width:100%;margin-top:0.5rem" onclick="showPaymentStep('delivery')">← Back</button>
+      </div>
+      <div class="payment-step" id="step-success">
+        <div class="success-screen">
+          <div class="success-icon">🎉</div>
+          <h3>Order Placed!</h3>
+          <p>Your Cfee order is confirmed and on its way!</p>
+          <div class="order-id" id="order-id-display">Order #---</div>
+          <p style="font-size:0.82rem;color:var(--muted)">Estimated: 25–35 minutes</p>
+          <button class="btn-primary" style="margin-top:1.5rem" onclick="closePayment()">Continue ☕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+<script>
+  function handleAddToCart(btn, name, price, emoji, category) {
+    addToCart(name, price, emoji, category);
+    btn.textContent = '✓ Added';
+    btn.classList.add('added');
+    setTimeout(() => { btn.textContent = '+ Add'; btn.classList.remove('added'); }, 1500);
+  }
+</script>
+</body>
+</html>
