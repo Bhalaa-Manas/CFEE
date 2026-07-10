@@ -436,7 +436,7 @@
     </div>
     <div class="store-inner">
       <div class="store-info">
-        <h3>Connaught Place, Delhi</h3>
+        <h3>Krishna Nagar, Delhi</h3>
         <p>Our flagship store — a cozy haven in the heart of the city.</p>
         <div class="store-detail">
           <span class="icon">📍</span>
@@ -483,28 +483,28 @@
         <h3>Reach Out</h3>
         <p>Questions about our menu? Want to give feedback? Or simply want to say hello — we're here!</p>
         <div class="contact-item">
-          <div class="c-icon">📍</div>
+          <div class="c-icon"><img src="./assets/location-pin.png" width="30"></div>
           <div class="c-text">
             <strong>Address</strong>
             <span>Krishna Nagar, New Delhi — 110001</span>
           </div>
         </div>
         <div class="contact-item">
-          <div class="c-icon">📞</div>
+          <div class="c-icon"><img src="./assets/phone-call.png" width="30"></div>
           <div class="c-text">
             <strong>Phone</strong>
             <span>+91 98765 43210</span>
           </div>
         </div>
         <div class="contact-item">
-          <div class="c-icon">✉️</div>
+          <div class="c-icon"><img src="./assets/logo.png" width="30"></div>
           <div class="c-text">
             <strong>Email</strong>
             <span>hello@cfee.in</span>
           </div>
         </div>
         <div class="contact-item">
-          <div class="c-icon">🕐</div>
+          <div class="c-icon"><img src="./assets/clock.png" width="30"></div>
           <div class="c-text">
             <strong>Hours</strong>
             <span>Mon–Sun: 8:00 AM – 10:00 PM</span>
@@ -587,7 +587,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2024 Cfee by @bhalaamanas. All rights reserved. | Made with ☕ in Delhi</p>
+    <p>© 2026 Cfee by @bhalaamanas. All rights reserved. | Made with ☕ in Delhi</p>
   </div>
 </footer>
 
@@ -760,6 +760,13 @@
   </div>
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>(function(){
+  emailjs.init("VRw2IdJH4QMcbqAsU");
+})();</script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="cart.js"></script>
 <script>
   function handleAddToCart(btn, name, price, emoji, category) {
@@ -769,22 +776,42 @@
     setTimeout(() => { btn.textContent = '+ Add'; btn.classList.remove('added'); }, 1500);
   }
 
-  function submitForm(btn) {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const msg = document.getElementById('message').value;
-    if (!name || !email || !msg) { showToast('Please fill all required fields'); return; }
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    setTimeout(() => {
-      showToast('✅ Message sent! We\'ll get back to you soon.');
+ function submitForm(btn) {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  if (!name || !email || !message) {
+    showToast('Please fill all required fields');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    subject: subject,
+    message: message
+  };
+
+  emailjs.send("service_afa6nbh", "template_iv4v3ru", templateParams)
+    .then(function(response) {
+      showToast('✅ Message sent successfully!');
       btn.disabled = false;
       btn.textContent = 'Send Message ✉️';
+
       document.getElementById('name').value = '';
       document.getElementById('email').value = '';
       document.getElementById('message').value = '';
-    }, 1500);
-  }
+    }, function(error) {
+      showToast('❌ Failed to send message');
+      btn.disabled = false;
+      btn.textContent = 'Send Message ✉️';
+    });
+}
 </script>
 </body>
 </html>

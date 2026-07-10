@@ -153,23 +153,127 @@ function selectPaymentMethod(method) {
   if (target) target.style.display = 'block';
 }
 
-function placeOrder() {
+async function placeOrder() {
+
   const selected = document.querySelector('.pm-option.selected');
-  if (!selected) { showToast('Please select a payment method'); return; }
 
-  const method = selected.dataset.method;
-
-  if (method === 'card') {
-    const num = document.getElementById('card-number')?.value;
-    const exp = document.getElementById('card-exp')?.value;
-    const cvv = document.getElementById('card-cvv')?.value;
-    if (!num || !exp || !cvv) { showToast('Please fill all card details'); return; }
+  if (!selected) {
+    showToast("Please select a payment method");
+    return;
   }
 
-  if (method === 'upi') {
-    const upi = document.getElementById('upi-id')?.value;
-    if (!upi) { showToast('Please enter your UPI ID'); return; }
+  const total = getTotal();
+  const tax = Math.round(total * 0.05);
+  const grand = total + tax + 30;
+
+  const btn = document.getElementById("place-order-btn");
+
+  btn.disabled = true;
+  btn.textContent = "Creating Order...";
+
+  try {
+
+    const response = await fetch("/api/create-order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        amount: grand
+      })
+    });
+
+    const order = await response.json();
+
+    const options = {
+
+      key: "YOUR_RAZORPAY_TEST_KEY_ID",
+
+      amount: order.amount,
+
+      currency: order.currency,
+
+      name: "CFEE Coffee",
+
+      description: "Coffee Order",
+
+      order_id: order.id,
+
+      handler: async function (response) {
+
+        const verify = await fetch("/api/verify-payment", {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify(response)
+
+        });
+
+        const result = await verify.json();
+
+        if (result.success) {
+
+          document.getElementById("order-id-display").textContent =
+            `Order #${response.razorpay_order_id}`;
+
+          cart = [];
+
+          saveCart();
+
+          updateCartUI();
+
+          showPaymentStep("success");
+
+        } else {
+
+          showToast("Payment verification failed");
+
+        }
+
+      },
+
+      prefill: {
+
+        name: "",
+
+        email: "",
+
+        contact: ""
+
+      },
+
+      theme: {
+
+        color: "#7b4a2e"
+
+      }
+
+    };
+
+    const rzp = new Razorpay(options);
+
+    rzp.open();
+
+    btn.disabled = false;
+    btn.textContent = "Place Order";
+
+  } catch (err) {
+
+    console.error(err);
+
+    showToast("Unable to create payment");
+
+    btn.disabled = false;
+
+    btn.textContent = "Place Order";
+
   }
+
+}
 
   // Simulate processing
   const btn = document.getElementById('place-order-btn');
