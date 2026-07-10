@@ -275,21 +275,6 @@ async function placeOrder() {
 
 }
 
-  // Simulate processing
-  const btn = document.getElementById('place-order-btn');
-  if (btn) { btn.disabled = true; btn.textContent = 'Processing…'; }
-
-  setTimeout(() => {
-    const orderId = 'CFEE' + Math.random().toString(36).substr(2, 8).toUpperCase();
-    document.getElementById('order-id-display').textContent = `Order #${orderId}`;
-    showPaymentStep('success');
-    cart = [];
-    saveCart();
-    updateCartUI();
-    if (btn) { btn.disabled = false; btn.textContent = 'Place Order'; }
-  }, 1800);
-}
-
 // ---------- Toast ----------
 function showToast(msg) {
   let t = document.getElementById('toast');
